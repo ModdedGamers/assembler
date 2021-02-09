@@ -14,7 +14,7 @@ maintenance = { status = "actively-developed" }
 
 [dependencies]
 ureq = { version = "2.0.1", features = ["json"] }
-rust-ini = "0.16.1"
+rust-ini = {version = "0.16.1", features = ["case-insensitive"]}
 
 [dependencies.clap]
 version = "3.0.0-beta.2"

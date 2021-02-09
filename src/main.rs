@@ -35,6 +35,11 @@ fn main() {
 			.aliases(&["s", "start", "launch"])
 
 		)
+		.subcommand(
+			App::new("config")
+			.about("Configure Assembler")
+			.aliases(&["config", "c", "configure"])
+		)
 
 
 		.get_matches();
