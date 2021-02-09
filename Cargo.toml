@@ -1,12 +1,17 @@
 [package]
-name = "mmf-rs"
+name = "Assembler"
 version = "0.1.0"
 authors = ["Mr Hedgehog <mrhedgehog0@protonmail.com>"]
 edition = "2018"
+readme = "README.md"
+homepage = "https://github.com/ModdedGamers/assembler"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clap = { version = "3.0.0-beta.2", features = ["yaml"] }
 ureq = { version = "2.0.1", features = ["json"] }
 
+[dependencies.clap]
+version = "3.0.0-beta.2"
+default-features = false
+features = [ "suggestions", "color", "wrap_help" ]
