@@ -2,6 +2,7 @@
 //I intend to make this easy to maintain and add features to in the future.
 
 use clap::{App, AppSettings, Arg, crate_authors, crate_version};
+use std::env
 
 fn main() {
 	let matches = App::new("asm")
@@ -39,6 +40,16 @@ fn main() {
 			App::new("config")
 			.about("Configure Assembler")
 			.aliases(&["config", "c", "configure"])
+
+			.arg(
+				Arg::new("edit")
+					.about("Open config file in your editor")
+					.short('e')
+					.long("edit")
+					.takes_value(false)
+					.exclusive(true)
+
+			)
 		)
 
 
