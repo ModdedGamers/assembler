@@ -4,7 +4,7 @@
 use clap::{App, AppSettings, Arg, crate_authors, crate_version};
 
 fn main() {
-	let matches = App::new("mmf-rs")
+	let matches = App::new("asm")
 		.version(crate_version!())
 		.author(crate_authors!())
 		.about("A mod manager for Factorio, written in Rust!")
@@ -33,7 +33,7 @@ fn main() {
 			App::new("start")
 			.about("Start factorio with the current modpack")
 			.aliases(&["s", "start", "launch"])
-			
+
 		)
 
 

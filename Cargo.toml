@@ -1,10 +1,14 @@
 [package]
-name = "Assembler"
+name = "assembler"
 version = "0.1.0"
 authors = ["Mr Hedgehog <mrhedgehog0@protonmail.com>"]
 edition = "2018"
 readme = "README.md"
 homepage = "https://github.com/ModdedGamers/assembler"
+license = "CC-BY-NC-SA-4.0"
+
+[badges]
+maintenance = { status = "actively-developed" }
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -14,4 +18,9 @@ ureq = { version = "2.0.1", features = ["json"] }
 [dependencies.clap]
 version = "3.0.0-beta.2"
 default-features = false
-features = [ "suggestions", "color", "wrap_help" ]
+features = [ "suggestions", "color", "wrap_help", "std", "cargo", ]
+
+[dev-dependencies]
+cargo-bom = "0.4.3"
+cargo-edit = "0.7.0"
+cargo-release = "0.13.10"
