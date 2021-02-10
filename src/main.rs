@@ -1,10 +1,13 @@
 //This code prioritizes readability over length.
 //I intend to make this easy to maintain and add features to in the future.
 
+//import crates
 use clap::{App, AppSettings, Arg, crate_authors, crate_version};
-use std::env
+use std::env;
+use ini::Ini;
 
-fn main() {
+
+pub fn main() {
 	let matches = App::new("asm")
 		.version(crate_version!())
 		.author(crate_authors!())
@@ -17,6 +20,7 @@ fn main() {
 				.about("Print every action the program takes as it is performed.")
 				.short('v')
 				.long("verbose")
+				.multiple(false)
 		)
 		.subcommand(
 			App::new("add")
@@ -55,5 +59,14 @@ fn main() {
 
 		.get_matches();
 
+		config(test, test, test);
 
+
+
+}
+
+pub fn config(cat: str, var: str, val: str) {
+	let mut conf = Ini::new();
+	conf.with_section(Some(cat))
+		.set(var, val);
 }
